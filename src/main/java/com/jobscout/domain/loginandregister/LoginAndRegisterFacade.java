@@ -11,7 +11,7 @@ public class LoginAndRegisterFacade {
     private final UserRepository userRepository;
 
     public UserDto findByUsername(String username){
-       return   userRepository.findByUsername(username)
+       return  userRepository.findByUsername(username)
                 .map(user -> new UserDto(user.id(),user.username(),user.password()))
                 .orElseThrow(RuntimeException::new);
     }

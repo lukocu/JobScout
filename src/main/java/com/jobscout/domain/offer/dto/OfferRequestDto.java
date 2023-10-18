@@ -1,13 +1,13 @@
-package com.jobscout.domain.offer;
+package com.jobscout.domain.offer.dto;
 
 import lombok.Builder;
 
 @Builder
-record Offer(
-        String id,
+public record OfferRequestDto(
+
         String companyName,
         String position,
         String salary,
-        String offerUrl) {
-
+        String offerUrl
+) {
 }
