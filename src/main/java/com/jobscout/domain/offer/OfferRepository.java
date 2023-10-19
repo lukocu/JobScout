@@ -1,6 +1,7 @@
 package com.jobscout.domain.offer;
 
 import com.jobscout.domain.offer.dto.OfferResponseDto;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 import java.util.Optional;
