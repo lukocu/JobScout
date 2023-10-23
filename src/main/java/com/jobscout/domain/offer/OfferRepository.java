@@ -1,20 +1,16 @@
 package com.jobscout.domain.offer;
 
-import com.jobscout.domain.offer.dto.OfferResponseDto;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
 import java.util.Optional;
 
-interface OfferRepository {
-
-    List<Offer> findAll();
-
-    Offer save(Offer offer);
+@Repository
+public interface OfferRepository extends MongoRepository<Offer, String> {
 
     boolean existsByOfferUrl(String offerUrl);
 
-    List<Offer> saveAll(List<Offer> offers);
 
-    Optional<Offer> findById(String id);
 }

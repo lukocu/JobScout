@@ -31,7 +31,7 @@ public class OfferClientConfig {
     public OfferFetchable remoteOfferClient(RestTemplate restTemplate,
                                             @Value("${offer.http.client.config.uri}") String uri,
                                             @Value("${offer.http.client.config.port}") int port) {
-        return new OfferRestTemplate(restTemplate, port, uri);
+        return new OfferClient(restTemplate, uri, port);
     }
 
 }

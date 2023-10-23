@@ -1,4 +1,8 @@
-spring:
-  data:
-    mongodb:
-      uri: mongodb://admin:admin@localhost:27017/offers
+http:
+  offers:
+    scheduler:
+      request:
+        delay: PT1S
+
+scheduling:
+  enabled: false
